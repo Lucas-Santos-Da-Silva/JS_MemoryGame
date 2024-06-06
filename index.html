@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogin da Memória</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/orange.png" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <h1>Jogin da Memória</h1>
+    <div class="grid-container"></div>
+    <p>Score: <span class="score"></span></p>
+    <div class="actions">
+        <button onclick="restart()">Restart</button>
+    </div>
+
+    <script>if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+                console.log('Service Worker registrado com escopo: ', registration.scope)
+            }).catch((error) => {
+                console.log('Falha no registro do Service Worker: ', error)
+            })
+    }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

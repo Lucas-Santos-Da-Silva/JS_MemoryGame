@@ -1,0 +1,8 @@
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+            console.log('Service Worker registrado com escopo: ', registration.scope)
+        }).catch((error) => {
+            console.log('Falha no registro do Service Worker: ', error)
+        })
+}
