@@ -1,5 +1,6 @@
 # JS_MemoryGame
 Atividade PWA - Progressive Web App - Jogo da memória
+
 ![GitHub License](https://img.shields.io/github/license/Lucas-Santos-Da-Silva/JS_MemoryGame)
 ![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Flucas-santos-da-silva.github.io%2FJS_MemoryGame%2F)
 ![Website](https://img.shields.io/website?url=https%3A%2F%2Flucas-santos-da-silva.github.io%2FJS_MemoryGame%2F)
