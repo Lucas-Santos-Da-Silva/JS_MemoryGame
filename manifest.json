@@ -1,7 +1,7 @@
 {
     "name": "Jogin da Memória",
     "short_name": "Jogin da Memória",
-    "start_url": "/js_memorygame/",
+    "start_url": "/",
     "display": "standalone",
     "orientation": "portrait",
     "description": "Um jogo simples de memória feito em html css e js",
