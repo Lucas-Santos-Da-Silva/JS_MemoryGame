@@ -21,6 +21,11 @@ Este repositório hospeda o projeto do site jogin da memóriaum estudo de JS e P
 ## Autor
 Lucas Santos da Silva
 
+## Código Base
+[Youtube](https://www.youtube.com/watch?v=xWdkt6KSirw)
+
+[GitHub](https://github.com/javascriptacademy-stash/memory-card-game)
+
 ## Links utilizados
 [Google Trends](https://trends.google.com.br/trends/)
 
@@ -29,10 +34,6 @@ Lucas Santos da Silva
 [Validador W3C HTML](https://validator.w3.org/#validate_by_upload)
 
 [Validador W3C CSS](https://jigsaw.w3.org/css-validator/#validate_by_upload)
-
-[Draw.io](https://app.diagrams.net)
-
-[Iconfinder](https://www.iconfinder.com)
 
 [Pixabay](https://pixabay.com/pt/)
 
