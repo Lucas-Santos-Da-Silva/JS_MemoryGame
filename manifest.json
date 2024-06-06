@@ -5,6 +5,8 @@
     "display": "standalone",
     "orientation": "portrait",
     "description": "Um jogo simples de memória feito em html css e js",
+    "categories": "entertainment",
+    "lang": "pt-br",
     
     "icons": [
       {
