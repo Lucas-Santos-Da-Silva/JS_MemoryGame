@@ -5,6 +5,7 @@ let lockBoard = false;
 let score= 0;
 
 document.querySelector(".score").textContent = score;
+
 fetch("./data/cards.json")
     .then((res) => res.json())
     .then((data) => {
@@ -12,6 +13,7 @@ fetch("./data/cards.json")
         shuffleCards();
         generateCards();
     });
+    
 function shuffleCards(){
     let currentIndex = cards.length,
     randomIndex,
@@ -63,6 +65,7 @@ function checkforMatch(){
     isMatch ? disableCards() : unflipCards();
     if (isMatch === true){
         score = score + 10;
+        document.querySelector(".score").textContent = score;
     }
 }
 
