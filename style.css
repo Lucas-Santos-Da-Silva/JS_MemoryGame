@@ -2,6 +2,7 @@ body{
     min-height: 100vw;
     min-width: 100vw;
     color:white;
+    background-color:rgb(7, 7, 34);
 }
 h1{
     text-align: center;
