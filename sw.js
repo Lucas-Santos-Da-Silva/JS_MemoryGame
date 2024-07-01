@@ -26,11 +26,10 @@ if ('serviceWorker' in navigator) {
     self.addEventListener('install', (event) => {
       event.waitUntil(
         caches.open(cachePWA)
-          .then((cache) => {
-            return cache.addAll(urlsToCache)
-          })
+          .then(cache => (cache.addAll(urlsToCache))),
       )
     })
+
     
     // Interceptando as solicitações de rede e servindo arquivos do cache quando offline
     self.addEventListener('fetch', (event) => {
@@ -46,7 +45,7 @@ if ('serviceWorker' in navigator) {
           })
       )
     })    
-    }
+    
     // O periodic sync permite que o app alerte o service worker para que atualize de tempos em tempos, no periodo de 1 minuto
     async function registerPeriodicNewsCheck() {
     const registration = await navigator.serviceWorker.ready;
@@ -58,4 +57,5 @@ if ('serviceWorker' in navigator) {
       console.log("Periodic Sync não registrado!");
     }
   }
-  //
+
+}
