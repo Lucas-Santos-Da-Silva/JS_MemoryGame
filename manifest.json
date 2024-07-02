@@ -14,5 +14,21 @@
         "sizes": "512x512",
         "type": "image/png"
       }
+    ],
+    "screenshots" : [
+      {
+        "src": "./assets/screenshot.png",
+        "sizes": "449x579",
+        "type": "image/png",
+        "form_factor": "wide",
+        "label": "Tela inicial do app"
+      },
+      {
+        "src": "./assets/screenshot1.png",
+        "sizes": "449x579",
+        "type": "image/png",
+        "form_factor": "narrow",
+        "label": "Outra screenshot da tela inicial do app"
+      }
     ]
   }
