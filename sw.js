@@ -16,8 +16,8 @@ const files_to_cache = [
   '/assets/strawbery.png',
   '/assets/tomato.png',
   '/assets/watermelon.png',
-  '/assets/screenshot.png',
   '/assets/screenshot1.png',
+  '/assets/screenshot.png',
 ]
 // Arquivos a serem armazenados em cache
 // Todos os arquivos devem ser adicionados ao vetor (exceto o manifesto)

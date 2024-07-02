@@ -10,7 +10,7 @@
     
     "icons": [
       {
-        "src": "./assets/orange.png",
+        "src": "./assets/icon.png",
         "sizes": "512x512",
         "type": "image/png"
       }
