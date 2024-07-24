@@ -1,12 +1,3 @@
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js')
-        .then((registration) => {
-            console.log('Service Worker registrado com escopo: ', registration.scope)
-        }).catch((error) => {
-            console.log('Falha no registro do Service Worker: ', error)
-        })
-  }
-
 const gridContainer = document.querySelector(".grid-container");
 let cards = [];
 let  firstCard, secondCard;
@@ -15,7 +6,7 @@ let score= 0;
 
 document.querySelector(".score").textContent = score;
 
-fetch("./data/cards.json")
+fetch("./cards.json")
     .then((res) => res.json())
     .then((data) => {
         cards = [...data, ...data];
@@ -42,7 +33,7 @@ function generateCards(){
         cardElement.setAttribute("data-name", card.name);
         cardElement.innerHTML =`
         <div class="front">
-        <img class="front-image" src=./assets/${card.image}>
+        <img class="front-image" src=${card.image}>
         </div>
         <div class="back"></div>
         `;

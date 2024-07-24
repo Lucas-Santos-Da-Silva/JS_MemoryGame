@@ -1,42 +1,37 @@
-
 // Nome do cache (controle de versão)
-const cachePWA = 'cache-v2'
-const files_to_cache = [
+const cachePWA = 'cache-v1'
+// Arquivos a serem armazenados em cache
+// Todos os arquivos devem ser adicionados ao vetor(exceto o manifesto)
+const urlsToCache = [
+  '/',
   '/index.html',  
   '/style.css',
   '/script.js',
-  '/sw.js',
   '/manifest.json',
-  '/data/cards.json',
-  '/assets/cherries.png',
-  '/assets/chili.png',
-  '/assets/grapes.png',
-  '/assets/lemon.png',
-  '/assets/orange.png',
-  '/assets/pineapple.png',
-  '/assets/strawbery.png',
-  '/assets/tomato.png',
-  '/assets/watermelon.png',
+  '/cards.json',
+  '/cherries.png',
+  '/chili.png',
+  '/grapes.png',
+  '/lemon.png',
+  '/orange.png',
+  '/pineapple.png',
+  '/strawberry.png',
+  '/tomato.png',
+  '/watermelon.png',
+  '/screenshot.png',
+  '/screenshot1.png',
+  '/icon.png'
 ]
-// Arquivos a serem armazenados em cache
-// Todos os arquivos devem ser adicionados ao vetor (exceto o manifesto)
 
 // Instalando o Service Worker e armazenando os arquivos no cache
 self.addEventListener('install', (event) => {
   event.waitUntil(
-      caches.open(cachePWA)
-          .then((cache) => {
-              console.log('Cache opened successfully');
-              return cache.addAll(files_to_cache);
-          })
-          .then(() => {
-              console.log('All files added to cache successfully');
-          })
-          .catch((error) => {
-              console.error('Error adding files to cache:', error);
-          })
-  );
-});
+    caches.open(cachePWA)
+      .then((cache) => {
+        return cache.addAll(urlsToCache)
+      })
+  )
+})
 
 // Interceptando as solicitações de rede e servindo arquivos do cache quando offline
 self.addEventListener('fetch', (event) => {
@@ -52,18 +47,21 @@ self.addEventListener('fetch', (event) => {
       })
   )
 })
-
 // O Periodic Sync permite que as aplicações web alertem seu Service Worker para fazer atualizações em um intervalo de tempo periodico
 // Neste caso a atualização ocorre no periodo de 1 dia
-async function registerPeriodicNewsCheck() {
+async function registrarAtualizacaoPeriodica() {
   const registration = await navigator.serviceWorker.ready;
   try {
+    
     await registration.periodicSync.register("get-latest-news", {
-      minInterval: 24 * 60 * 60 * 1000,
+      minInterval: 12 * 60 * 60 * 1000,
     });
   } catch {
-    console.log("Periodic Sync could not be registered!");
+    console.log("Periodic Sync não pode ser registrado.");
   }
 }
 
+
+
+  
 

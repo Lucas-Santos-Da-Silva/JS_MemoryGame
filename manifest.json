@@ -1,34 +1,18 @@
 {
     "name": "Jogin da Memória",
-    "short_name": "Jogin da Memória",
-    "start_url": "/JS_MemoryGame-main/",
+    "short_name": "JM",
+    "start_url": "/",
     "display": "standalone",
+    "display_override": ["minimal-ui", "window-controls-overlay"],
     "orientation": "portrait",
-    "description": "Um jogo simples de memória feito em html css e js",
-    "categories": "entertainment",
     "lang": "pt-br",
-    
+    "id": "/",
     "icons": [
       {
-        "src": "./assets/icon.png",
+        "src": "icon.png",
         "sizes": "512x512",
         "type": "image/png"
       }
-    ],
-    "screenshots" : [
-      {
-        "src": "./assets/screenshot.png",
-        "sizes": "449x579",
-        "type": "image/png",
-        "form_factor": "wide",
-        "label": "Tela inicial do app"
-      },
-      {
-        "src": "./assets/screenshot1.png",
-        "sizes": "449x579",
-        "type": "image/png",
-        "form_factor": "narrow",
-        "label": "Outra screenshot da tela inicial do app"
-      }
     ]
-  }
+    
+}
